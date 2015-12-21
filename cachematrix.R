@@ -6,8 +6,8 @@
 makeCacheMatrix <- function(x = matrix()) {
 
   ## Tests if the supplied argument is a matrix
-	if(is.matrix(x))
-	{
+  if(is.matrix(x))
+  {
     inverse <- NULL
     mat <- x
   } else
@@ -18,8 +18,8 @@ makeCacheMatrix <- function(x = matrix()) {
   }
   
   set <- function(x = matrix()) {
-	if(is.matrix(x))
-	{
+  if(is.matrix(x))
+  {
     print("Supplied argument not a matrix. Using empty matrix instead")
 	  inverse <<- NULL
     mat <<- x
@@ -41,7 +41,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## the inverse, if it has already been calculated.
 cacheSolve <- function(x, ...) {
    ## Return a matrix that is the inverse of 'x'
-	inv <- x$getinverse()
+  inv <- x$getinverse()
   if(!is.null(inv)) {
     message("getting cached data")
     return(inv)
